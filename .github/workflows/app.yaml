@@ -69,14 +69,14 @@ jobs:
       
       
      # AWS Credentials
-    - uses: aws-actions/configure-aws-credentials@v1
-      with:
+     - uses: aws-actions/configure-aws-credentials@v1
+       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ env.EKS_REGION }}
 
     # Get the EKS credentials so we can deploy to the cluster
-    - run: |-
+     - run: |-
         aws eks --region $EKS_REGION update-kubeconfig --name $EKS_CLUSTER
       
      - name: Update CloudFlare DNS with Cluster IP 
