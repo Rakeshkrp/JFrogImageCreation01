@@ -44,18 +44,18 @@ jobs:
     # Deploy docorized app image to the GKE cluster
     - name: Deploy Frontend 
       run: |-
-        kubectl apply -f frontend.yaml
+        kubectl apply -f frontend_lb.yaml
         kubectl wait --timeout=90s --for=condition=ready pod -l app=frontend
         kubectl rollout restart deploy frontend-deployment
         kubectl rollout status deployment frontend-deployment
         
     # Deploy gateway and virtual services
-    - name: Deploy gateway
-      run: |-
-        kubectl apply -f gateway.yaml
-        kubectl get svc -l=istio=ingressgateway -n istio-system
+    #- name: Deploy gateway
+    #  run: |-
+    #    kubectl apply -f gateway.yaml
+    #    kubectl get svc -l=istio=ingressgateway -n istio-system
         #kubectl apply -f gateway.yaml
-        kubectl apply -f vs-frontend.yaml
+     #   kubectl apply -f vs-frontend.yaml
         
 
   Job2:
