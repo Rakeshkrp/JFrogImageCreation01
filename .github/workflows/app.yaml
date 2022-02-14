@@ -45,7 +45,7 @@ jobs:
     - name: Deploy Frontend 
       run: |-
         kubectl apply -f frontend.yaml
-        kubectl wait --timeout=90s --for=condition=ready pod -l app=frontend
+        kubectl wait --timeout=900s --for=condition=ready pod -l app=frontend
         kubectl rollout restart deploy frontend-deployment
         kubectl rollout status deployment frontend-deployment
         
