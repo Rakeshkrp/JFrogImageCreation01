@@ -1,1 +1,1 @@
-# A repo created to create an image of the application in the JFrog Artifacts
+# A repo created to deploy an image of the application in the JFrog Artifacts
