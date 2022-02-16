@@ -18,7 +18,7 @@ spec:
        - name: jfrog-secret 
       containers: 
       - name: frontend
-        image: sreyo.jfrog.io/ns-docker-dev-local/frontend-docker
+        image: sreyo.jfrog.io/rp-docker-dev-local/frontend-docker
         imagePullPolicy: Always
         ports:
         - containerPort: 80

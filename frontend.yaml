@@ -25,7 +25,7 @@ spec:
       - name: frontend
         #image: frontend-docker:latest # image we pushed
         #image: neethusnair/frontend-docker:latest # image we pushed
-        image: sreyo.jfrog.io/ns-docker-dev-local/frontend-docker # image we pushed
+        image: sreyo.jfrog.io/rp-docker-dev-local/frontend-docker # image we pushed
         
         #imagePullPolicy: Never
         imagePullPolicy: Always
